@@ -41,7 +41,7 @@ public class Hashing {
         Document doc = Jsoup.connect(url).timeout(0).get();
         Elements text = doc.select("body");
         String teks = text.text();
-        teks = teks.replaceAll("[(-+.^:,'|&?!)]", "").replaceAll("yang", "").replaceAll("dengan", "").replaceAll("dan", "").replaceAll("dari", "");
+        teks = teks.replaceAll("[(-+.^:,'|&?!)]", "").replaceAll("yang", "").replaceAll("dengan", "").replaceAll("dan", "").replaceAll("dari", "").replaceAll("ke","");
         String[] kata = teks.split(" ");
 
         //-----------------------------------
